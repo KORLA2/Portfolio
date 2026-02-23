@@ -1,7 +1,7 @@
 import React from 'react'
 
 type  sizetype="sm"|"default"|"lg";
-const Button = ({className="",size="default",children}:{className:string,size:sizetype,children:string}) => {
+const Button = ({className="",size="default",children}:{className:string,size:sizetype,children:React.ReactNode}) => {
 
 const baseClass="overflow-hidden relative rounded-full font-medium transition bg-green-800 shadow-lg  hover:shadow-green-800 cursor-pointer"
 

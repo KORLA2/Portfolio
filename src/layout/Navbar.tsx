@@ -21,7 +21,7 @@ const links=[
 const Navbar = () => {
   const [open,setisOpen]=useState(true);
   return (
-    <header className="fixed top-0 py-5 animate-fade left-0 right-0 ">
+    <header className="fixed top-0 z-50  py-5 animate-fade left-0 right-0 ">
 
 <nav className=" flex px-8 md:px-15 justify-between items-center">
 
