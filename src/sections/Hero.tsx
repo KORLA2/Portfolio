@@ -1,4 +1,4 @@
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Download, Github, Linkedin, Twitter, Youtube } from "lucide-react";
 import Button from "../Components/Button";
 
 const Hero = () => {
@@ -9,6 +9,30 @@ const dots = [...Array(100)].map(() => ({
   animation:`slowdrift ${15+Math.random()*30}s ease-in-out infinite`,
   animationDelay:`${Math.random()*15}s`
 }));
+
+
+const socials=[
+  {name:Github,href:"https://github.com/KORLA2"},
+  {name:Linkedin,href:"https://github.com/KORLA2"},
+  {name:Youtube,href:"https://github.com/KORLA2"},
+  {name:Twitter,href:"https://github.com/KORLA2"},
+
+
+]
+
+const skills:string[]=[
+  "React.js",
+  "Next.js",
+  "Redux Tool Kit",
+  "TailwindCSS",
+  "JavaScript",
+  "C/C++",
+  "Node.js",
+  "Express.js",
+  "PostgreSQL",
+
+
+]
 
   return (
     <section className="min-h-screen relative flex items-center overflow-hidden">
@@ -31,7 +55,7 @@ const dots = [...Array(100)].map(() => ({
 </div>
   </div>
 
-<div className="relative mx-auto px-6 pt-32 pb-20">
+<div className="relative w-full mx-auto px-6 pt-32 pb-20">
 
 <div className="grid lg:grid-cols-2 gap-12 items-center">
 {/* Left PArt */}
@@ -44,7 +68,7 @@ const dots = [...Array(100)].map(() => ({
   </div>
 
 <div className="space-y-4">
-  <h1 className="text-4xl md:text-5xl pointer-events-none leading-tight animate-fade animation-delay-500">Iam a <span className="glow text-green-400 text-shadow-sm text-shadow-green-300 ">
+  <h1 className="text-4xl md:text-5xl pointer-events-none leading-tight animate-fade animation-delay-100">Iam a <span className="glow text-green-400 text-shadow-sm text-shadow-green-300 ">
     FullStack Developer
     </span>
     <br/>
@@ -56,29 +80,76 @@ React.js . Node.js
   </span>
   
      </h1>
-     <p className="text-lg max-w-lg animate-fade animation-delay-600">
+     <p className="text-lg max-w-lg animate-fade animation-delay-200">
      Iam a  Software Engineer experienced in React, Node.js, TypeScript, and Next.js, creating performant and secure full-stack applications.
      </p>
 </div>
 
-<div className="flex flex-wrap gap-4 animate-fade animation-delay-200 justify-around">
+<div className="flex flex-wrap gap-4 animate-fade animation-delay-300 justify-around">
 <Button className="inline-flex items-center gap-2" size="lg"><span> Contact Me </span> <ArrowRight className="w-5 h-5"/> </Button>
 
-<Button className="inline-flex animate-border bg-green-800/50 items-center gap-2" size="lg"><span> Download Resume</span> <Download className="w-5 h-5"/> </Button>
+<Button className="inline-flex animate-border transition-[animate-border] duration-300 bg-green-800/50 items-center gap-2 whitespace-nowrap" size="lg"><span> Download Resume</span> <Download className="w-5 h-5"/> </Button>
 
  
   </div>  
+ 
+<div className="flex items-center gap-4 animate-fade animation-delay-400 ">
+  <span className="text-lg text-gray-200">Follow Me:</span>
+  {
+    socials.map((social,idx)=><a target="blank" className= {` p-2 transition-all   rounded-full hover:bg-green-700/60`} key={idx} href={social.href}>{<social.name className="h-5 w-5"/>}</a>)
+  }
+</div>
+
 </div>
 
 {/* Right Part */}
-<div>
+  <div className="animate-fade relative animation-delay-300">
+      <div className="absolute inset-0 rounded-4xl bg-linear-to-br from-orange-500 via-transparent to-orange-200/80 animate-pulse blur-2xl  "/>
+      <div className="relative max-w-sm mx-auto">
+         <div className="p-2 relative rounded-3xl shadow-[0_0_20px_rgba(34,197,94,0.6)]">
+          <img src="/Rocky-2.png" alt="Korla Goutham" className="w-full object-cover aspect-square rounded-2xl"/> 
+         {/* Floating Badges */}
+            <div className="absolute -bottom-4 -right-4 rounded-xl px-4 py-3 animate">
+              <div className="flex gap-3 items-center">
+                <div className="h-3 w-3 bg-green-500 rounded-full animate-pulse"/>
+                <span> Available for work</span>
+              </div>
+            </div>
+         
 
+         {/* Stats Badge */}
+          <div className=" absolute -top-4 -left-4 animate rounded-xl px-4 py-3 animation-delay-400">
+            <div className="text-2xl font-bold text-green-400"> 3+</div>
+            <div className="text-sm text-gray-400"> Years Of Experience</div>
+          </div>
+         </div>
+      </div>
+  </div>
+  
 </div>
+  <div className="mt-20  animate-fade animation-delay-600">
+    <p className="text-lg text-center mb-6 text-gray-300">Technologies I work with</p>
+    
+   <div className="relative w-full overflow-hidden">
+    <div className="flex  animate-slide w-max">
+  {[...skills,...skills].map((skill)=>(
+    <div className="px-8 py-4 shrink-0">
+      <span className="text-xl font-semibold cursor-pointer  text-gray-300 transition  hover:text-green-300">{skill}</span>
+      </div>
+  ))}
+    </div>
+   </div>
+  </div>
 </div>
 
+<div className="absolute bottom-5 left-1/2 -translate-x-1/2
+ animate-fade animation-delay-800
+">
+<a href="#about" className=" flex flex-col items-center gap-2 text-gray-300 hover:text-white">
+<span className="text-xs uppercase tracking-widest">Scroll</span>
+<ChevronDown className="animate-bounce h-6 w-6"/>
+</a>
 </div>
-
-
     </section>
   )
 }

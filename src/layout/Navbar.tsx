@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Button from "../Components/Button"
 import { Menu, XIcon } from "lucide-react";
 
@@ -19,11 +19,22 @@ const links=[
 ]
 
 const Navbar = () => {
-  const [open,setisOpen]=useState(true);
-  return (
-    <header className="fixed top-0 z-50  py-5 animate-fade left-0 right-0 ">
+  const [open,setisOpen]=useState(false);
+  const[scroll,setScroll]=useState(false);
+useEffect(()=>{
 
-<nav className=" flex px-8 md:px-15 justify-between items-center">
+    const handleScroll=()=>{
+        setScroll(window.scrollY>50)
+    }
+    window.addEventListener('scroll',handleScroll);
+    return ()=>window.removeEventListener('scroll',handleScroll)
+
+},[])
+
+  return (
+    <header className={`fixed top-0 z-50 transition-all duration-1000 ${scroll?'py-2':'py-5'}  backdrop-blur-xl animate-fade left-0 right-0 `}>
+
+<nav className=" flex px-8 container mx-auto md:px-15 justify-between items-center">
 
 <a  className="text-xl font-bold hover:text-green-700 cursor-pointer transition">
 Goutham
