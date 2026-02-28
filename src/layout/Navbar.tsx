@@ -53,14 +53,15 @@ max-md:absolute max-md:top-0 max-md:left-0 z-5  ${open ? "max-md:translate-x-0 m
     links.map((link,index)=><a 
     key ={index}
     href={link.href}
-    className="px-4 py-2 text-sm rounded-full text-gray-300 transition  hover:text-white"
+    onClick={()=>setisOpen(false)}
+    className="px-4 py-2 text-sm rounded-full  text-gray-300 transition  hover:text-white"
     >{link.name}</a>)
   }
-  <Button className=" md:hidden mt-2" size="sm" >Contact Me</Button>
+  <Button onClick={()=>setisOpen(false)}  className="transition-all md:hidden mt-2" size="sm" >Contact Me</Button>
 
     </div>
 
-<Button className="max-md:hidden " size="sm" >Contact Me</Button>
+<Button  className="max-md:hidden " size="sm" >Contact Me</Button>
 <Menu  onClick={()=>setisOpen(prev=>!prev)} className="  md:hidden"/>
 </nav>
     </header>

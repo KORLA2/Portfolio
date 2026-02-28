@@ -1,7 +1,7 @@
 import Hero from "./sections/Hero"
 import Navbar from './layout/Navbar'
 import Contact from "./sections/Contact"
-import About from "./sections/ABout"
+import About from "./sections/About"
 
 const App = () => {
   return (
@@ -9,8 +9,8 @@ const App = () => {
   <Navbar/>
   <main>
      <Hero/>
-    {/* <About/>
-    <Contact/> */}
+    <About/>
+    <Contact/>
 
   </main>
 

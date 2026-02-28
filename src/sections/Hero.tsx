@@ -36,7 +36,7 @@ const skills:string[]=[
 
   return (
     <section className="min-h-screen relative flex items-center overflow-hidden">
-  <div className="absolute inset-0" >
+  <div className="absolute h-full  inset-0" >
     <img src="/4.jpeg" alt="NO Image"
     className="w-full h-full pointer-events-none opacity-40 object-cover"
     />
@@ -96,7 +96,7 @@ React.js . Node.js
 <div className="flex items-center gap-4 animate-fade animation-delay-400 ">
   <span className="text-lg text-gray-200">Follow Me:</span>
   {
-    socials.map((social,idx)=><a target="blank" className= {` p-2 transition-all   rounded-full hover:bg-green-700/60`} key={idx} href={social.href}>{<social.name className="h-5 w-5"/>}</a>)
+    socials.map((social,idx)=><a target="blank" style={{animationDelay:`${(idx+1)*100}ms`}} className= {` p-2 transition-all   rounded-full hover:bg-green-700/60`} key={idx} href={social.href}>{<social.name className="h-5 w-5"/>}</a>)
   }
 </div>
 

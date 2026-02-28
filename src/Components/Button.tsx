@@ -1,7 +1,7 @@
 import React from 'react'
 
 type  sizetype="sm"|"default"|"lg";
-const Button = ({className="",size="default",children}:{className:string,size:sizetype,children:React.ReactNode}) => {
+const Button = ({className="",size="default",children,onClick}:{className:string,size:sizetype,children:React.ReactNode,onClick?:()=>void}) => {
 
 const baseClass="overflow-hidden relative rounded-full font-medium transition bg-green-800 shadow-lg  hover:shadow-green-800 cursor-pointer"
 
@@ -13,7 +13,7 @@ const sizeclass={
 
 const classes=`${baseClass} ${sizeclass[size]} ${className}`
   return (
-    <div className={classes}>{children}</div>
+    <div onClick={onClick} className={classes}>{children}</div>
   )
 }
 
