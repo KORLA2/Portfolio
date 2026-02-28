@@ -2,7 +2,7 @@ import { Code, Lightbulb, Rocket, UsersIcon } from 'lucide-react'
 import React from 'react'
 
 const highlights=[
-  {icon:Code,title:"Code",description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?"},
+  {icon:Code,title:"Code",description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?"},
  {icon:Rocket,title:'Performance',description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?"},
   {icon:UsersIcon,title:"Collaboration",description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?"},
   {icon:Lightbulb,title:"Innovation",description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?"},
@@ -40,11 +40,11 @@ const About = () => {
 <div className='grid sm:grid-cols-2 gap-6'>
   {
     highlights.map((item,idx)=>(
-   <div style={{animationDelay:`${(idx+1)*100}ms`}} className='bg-gray-600 p-6 rounded-2xl animate-fade'>
+   <div style={{animationDelay:`${(idx+1)*100}ms`}} className='bg-gray-600 p-6  rounded-2xl animate-fade'>
     <div className='w-12 h-12 rounded-xl cursor-pointer bg-red-500/50 transition-all flex justify-center items-center mb-4 hover:bg-green-500/50'>
     <item.icon className='h-6 w-6 text-black'/></div>
     <p className='text-lg font-semibold mb-2'>{item.title}</p>
-    <p className='text-sm text-gray-300'>{item.description.substring(0,30)}</p>
+    <p className='text-sm text-gray-300'>{item.description}</p>
     </div>
     ))
   }
