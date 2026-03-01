@@ -10,7 +10,7 @@ const links=[
         href:"#projects",
         name:"Projects"
     }, {
-        href:"#expereince",
+        href:"#experience",
         name:"Expereince"
     }, {
         href:"#testimonials",

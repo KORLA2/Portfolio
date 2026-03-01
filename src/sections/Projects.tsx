@@ -8,8 +8,14 @@ const projects=[
     description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?",
     tags:["React.js","Node.js","PostgreSQL","TailwindCSS"]
   },
-  {image:"/Youtube.png",title:"Youtube Clone",tags:["React.js","TailwindCSS"]},
-  {image:"/Netflix.png",title:"Netflix Clone", github:"",description:"",link:"", tags:["React.js","TailwindCSS"]},
+  {image:"/Youtube.png",title:"Youtube Clone",link:"https://quick-show-hije.vercel.app/",
+    github:"https://github.com/KORLA2",
+    description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?"
+   ,tags:["React.js","TailwindCSS"]},
+  {image:"/Netflix.png",title:"Netflix Clone", link:"https://quick-show-hije.vercel.app/",
+    github:"https://github.com/KORLA2",
+    description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, consequuntur?",
+   tags:["React.js","TailwindCSS"]},
 ]
 
 const Projects = () => {
