@@ -99,6 +99,7 @@ transform:translateY(-10px);
   animation-delay: 600ms;
 }
 
+
 @keyframes border {
  0% ,100% { border-left: 3px solid rgb(8, 237, 203);}
   25% { border-bottom: 3px solid rgb(8, 237, 203) }

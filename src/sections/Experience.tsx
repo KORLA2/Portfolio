@@ -58,9 +58,9 @@ const Experience = () => {
             >
 
               <div className='absolute rounded-full  animate-fade left-0 md:left-1/2  -translate-x-1/2 ring-4 ring-green-800  top-0 w-3 h-3 bg-green-500  '> 
-              <span className='animate-ping bg-red-500 absolute inset-0 opacity-75 rounded-full'></span>
+              <span className='animate-ping  bg-red-500 absolute inset-0 opacity-75 rounded-full'></span>
               </div>
-              <div className={`pl-8 md:pl-0 
+              <div    className={`pl-8 md:pl-0  
                ${idx%2==0?"md:pr-16 md:text-right":"md:pl-16 md:col-start-2"}
                 `}>
                 <div className='p-6 group bg-gray-700 hover:bg-gray-800 rounded-2xl border transition-all duration-500 border-gray-400/40 hover:border-gray-400/80 cursor-pointer '>
