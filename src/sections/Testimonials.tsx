@@ -18,6 +18,23 @@ const testimonials=[
     author:"Sarah Chen",
     role:"CTO, Tech Innovators",
     avatar:"/user.jpg" 
+},
+{
+
+   quote:"Goutham is one of the talented engineers I've worked with . His attention to detail making complex things easier is remarkbale ",
+    author:"Sarah Chen",
+    role:"CTO, Tech Innovators",
+    avatar:"/user.jpg" 
+  },{
+   quote:"rkbale ",
+    author:"Sarah Chen",
+    role:"CTO, Tech Innovators",
+    avatar:"/user.jpg" 
+},{
+   quote:"Goutham is one of the talented es easier is remarkbale ",
+    author:"Sarah Chen",
+    role:"CTO, Tech Innovators",
+    avatar:"/user.jpg" 
 }
 ]
 
@@ -31,7 +48,7 @@ const next=()=>{
 }
 useEffect(()=>{
 
-const interval=setInterval(()=>{ next()},2000)
+const interval=setInterval(()=>{ next()},4000)
 
 return ()=> clearInterval(interval);
 },[])

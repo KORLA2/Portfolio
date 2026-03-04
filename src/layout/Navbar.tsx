@@ -61,7 +61,7 @@ max-md:absolute max-md:top-0 max-md:left-0 z-5  ${open ? "max-md:translate-x-0 m
 
     </div>
 
-<Button  className="max-md:hidden " size="sm" >Contact Me</Button>
+<Button  className="max-md:hidden " size="sm" ><a href="#contact"> Contact Me</a></Button>
 <Menu  onClick={()=>setisOpen(prev=>!prev)} className="  md:hidden"/>
 </nav>
     </header>

@@ -1,5 +1,6 @@
 import Hero from "./sections/Hero"
 import Navbar from './layout/Navbar'
+import Footer from './layout/Footer'
 import Contact from "./sections/Contact"
 import About from "./sections/About"
 import Projects from "./sections/Projects"
@@ -17,7 +18,7 @@ const App = () => {
     <Experience/>
     <Testimonials/>
     <Contact/>
-
+<Footer/>
   </main>
 
 </div>

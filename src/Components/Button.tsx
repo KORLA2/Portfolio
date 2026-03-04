@@ -1,7 +1,7 @@
 import React from 'react'
 
 type  sizetype="sm"|"default"|"lg";
-const Button = ({className="",size="default",children,onClick}:{className:string,size:sizetype,children:React.ReactNode,onClick?:()=>void}) => {
+const Button = ({className="",size="default",children,onClick,...props}:{className:string,size:sizetype,children:React.ReactNode,onClick?:()=>void}) => {
 
 const baseClass="overflow-hidden relative rounded-full font-medium transition bg-green-800 shadow-lg  hover:shadow-green-800 cursor-pointer"
 
@@ -13,7 +13,9 @@ const sizeclass={
 
 const classes=`${baseClass} ${sizeclass[size]} ${className}`
   return (
-    <div onClick={onClick} className={classes}>{children}</div>
+   <button onClick={onClick} className={classes} {...props}>
+<span className='relative flex items-center justify-center'>{children}</span>
+   </button>
   )
 }
 
