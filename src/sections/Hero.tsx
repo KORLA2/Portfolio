@@ -6,16 +6,16 @@ const Hero = () => {
 const dots = [...Array(100)].map(() => ({
   left: `${Math.random() * 100}%`,
   top: `${Math.random() * 100}%`,
-  animation:`slowdrift ${15+Math.random()*30}s ease-in-out infinite`,
+  animation:`slowdrift ${15+Math.random()*3}s ease-in-out infinite`,
   animationDelay:`${Math.random()*15}s`
 }));
 
 
 const socials=[
   {name:Github,href:"https://github.com/KORLA2"},
-  {name:Linkedin,href:"https://github.com/KORLA2"},
-  {name:Youtube,href:"https://github.com/KORLA2"},
-  {name:Twitter,href:"https://github.com/KORLA2"},
+  {name:Linkedin,href:"https://www.linkedin.com/in/korla-goutham-4007701a4/"},
+  {name:Youtube,href:"https://www.youtube.com/@CloudNewbie1023"},
+  {name:Twitter,href:"https://x.com/goutham1023"},
 
 
 ]

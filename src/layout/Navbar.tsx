@@ -42,7 +42,7 @@ Goutham
 
     <div className={`
         max-md:font-medium max-md:text-lg flex flex-col items-center  md:flex-row
-max-md:justify-center  px-8 py-2 max-md:h-screen  md:rounded-full backdrop-blur bg-black/60
+max-md:justify-center  px-8 py-2 max-md:h-screen  md:rounded-full backdrop-blur bg-black/80
 md:bg-white/10 md:border  md:border-gray-300/20 overflow-hidden transition-[translate] duration-300
 max-md:absolute max-md:top-0 max-md:left-0 z-5  ${open ? "max-md:translate-x-0 max-md:w-full" : "max-md:-translate-x-full"}
 

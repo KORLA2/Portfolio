@@ -1,13 +1,15 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Old+Italic&family=Outfit:wght@100..900&family=Pacifico&family=Yuji+Boku&display=swap');
 html {
   scroll-behavior:smooth
 
 }
 body{
   background-color: rgb(28, 28, 28);
-  font-family:cursive;
-  color:white;
+ /* font-family: cursive; */
+ font-family: "Pacifico", cursive;
+ color:white;
+
 }
 
 *{
