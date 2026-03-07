@@ -68,7 +68,7 @@ const skills:string[]=[
   </div>
 
 <div className="space-y-4">
-  <h1 className="text-4xl md:text-5xl pointer-events-none leading-tight animate-fade animation-delay-100">Iam a <span className="glow text-green-400 text-shadow-sm text-shadow-green-300 ">
+  <h1 className="text-4xl md:text-5xl pointer-events-none leading-tight animate-fade animation-delay-100">Iam a <span className="glow text-green-500 text-shadow-sm text-shadow-green-800 ">
     FullStack Developer
     </span>
     <br/>
@@ -88,9 +88,17 @@ React.js . Node.js
 <div className="flex flex-wrap gap-4 animate-fade animation-delay-300 justify-around">
 <Button className="inline-flex items-center gap-2" size="lg"><a href="#contact"> Contact Me </a> <ArrowRight className="w-5 h-5"/> </Button>
 
-<Button className="inline-flex animate-border transition-[animate-border] duration-300 bg-green-800/50 items-center gap-2 whitespace-nowrap" size="lg"><span> Download Resume</span> <Download className="w-5 h-5"/> </Button>
+<a
+  href="/Korla-Goutham.pdf"
+download>   
+<Button className="inline-flex animate-border  transition-[animate-border] duration-300 bg-green-800/50 items-center gap-10 whitespace-nowrap" size="lg">
 
- 
+  Download Resume
+<Download className="w-5 h-5"/> 
+
+</Button>
+  </a>
+
   </div>  
  
 <div className="flex items-center gap-4 animate-fade animation-delay-400 ">

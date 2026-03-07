@@ -1,41 +1,35 @@
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { ChevronLeft, ChevronRight, Quote, UserCircle } from "lucide-react"
 import { useEffect, useState } from "react"
 
 const testimonials=[
 {
 
-   quote:"Goutham is one of the talented engineers I've worked with . His attention to detail making complex things easier is remarkbale ",
-    author:"Sarah Chen",
-    role:"CTO, Tech Innovators",
-    avatar:"/user.jpg" 
+   quote:"Goutham’s contributions to the frontend and web components have been valuable to the team. His commitment and consistent effort are greatly appreciated",
+    author:"NaveenKumar Desireddy",
+    role:"Manager Software Development Infor",
+    avatar:0,
+    color:"text-green-800"
   },{
-   quote:"rkbale ",
-    author:"Sarah Chen",
-    role:"CTO, Tech Innovators",
-    avatar:"/user.jpg" 
+   quote:"Goutham has shown strong initiative in expanding his technical knowledge of the SmartStream platform and collaborating effectively with the team to deliver changes for the SS-Web 8.7 release",
+    author:"Ilamathi Ravindran",
+    role:"Manager Software Development Infor",
+    avatar:0,
+    color:"text-green-700"
+
 },{
-   quote:"Goutham is one of the talented es easier is remarkbale ",
-    author:"Sarah Chen",
-    role:"CTO, Tech Innovators",
-    avatar:"/user.jpg" 
+   quote:"Goutham contributed to improving the college website by implementing UI enhancements and resolving frontend issues, helping make academic information more accessible for students",
+    author:"T. Venu Gopal",
+    role:"Vice Principal JNTU",
+    color:"text-red-800",
+    avatar:0
 },
 {
 
-   quote:"Goutham is one of the talented engineers I've worked with . His attention to detail making complex things easier is remarkbale ",
-    author:"Sarah Chen",
-    role:"CTO, Tech Innovators",
-    avatar:"/user.jpg" 
-  },{
-   quote:"rkbale ",
-    author:"Sarah Chen",
-    role:"CTO, Tech Innovators",
-    avatar:"/user.jpg" 
-},{
-   quote:"Goutham is one of the talented es easier is remarkbale ",
-    author:"Sarah Chen",
-    role:"CTO, Tech Innovators",
-    avatar:"/user.jpg" 
-}
+   quote:"QuickShow demonstrates solid full-stack engineering thinking. The seat-locking mechanism and performance optimizations make it feel like a real production booking system.",
+    author:"Dinakar Karengula",
+    role:"Software Engineer CCG . Developer Peer",
+    avatar:"/image.png" 
+  }
 ]
 
 const Testimonials = () => {
@@ -48,7 +42,7 @@ const next=()=>{
 }
 useEffect(()=>{
 
-const interval=setInterval(()=>{ next()},4000)
+const interval=setInterval(()=>{ next()},7000)
 
 return ()=> clearInterval(interval);
 },[])
@@ -80,7 +74,8 @@ Kind Words From
       </div>
       <p className="text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4">{testimonials[activeIdx].quote}</p>
        <div className=" flex items-center gap-4">
-        <img className="h-14 w-14 object-cover rounded-full ring-2 ring-red-800/70" src={testimonials[activeIdx].avatar}/>
+      { !testimonials[activeIdx].avatar? <UserCircle className={`h-14 w-14 ${testimonials[activeIdx].color}`} />: < img  className="h-14 w-14 object-cover rounded-full ring-2 ring-green-800/70" src={testimonials[activeIdx].avatar}/>
+        }
       <div>
         <div className="font-semibold"> {testimonials[activeIdx].author}</div>
         <div className="text-sm text-gray-300">{testimonials[activeIdx].role}

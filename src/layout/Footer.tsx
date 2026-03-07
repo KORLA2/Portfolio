@@ -24,7 +24,7 @@ const currYear=new Date().getFullYear();
   return (
    <footer className="py-12 ring-2 ring-green-900/90 border-t border-green-900 ">
 <div className='mx-auto px-6 container'>
-<div className='flex flex-col md:flex-row items-center justify-between gap-8'>
+<div className='flex flex-col md:flex-row animate-fade items-center justify-between gap-8'>
 <div className='text-center md:text-left'>
  <a href="#" className='text-xl font-bold tracking-tight'>
     Goutham

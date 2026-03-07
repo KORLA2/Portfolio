@@ -2,7 +2,7 @@ import { AlertCircle, CheckCircle, Mail, MapPin, Phone, Send } from 'lucide-reac
 import React, { useState } from 'react'
 import Button from '../Components/Button'
 import emailjs from '@emailjs/browser'
-
+import { useInView } from "react-intersection-observer";
 const contactInfo=[{
   icon:Mail,
   label:"Email",
@@ -24,6 +24,12 @@ const contactInfo=[{
 ]
 
 const Contact = () => {
+
+    const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0
+  });
+
 const [form,setForm]=useState({
   name:"",
   email:"",
@@ -84,15 +90,15 @@ setSubmitStatus({type:"error",message:err.text||"Failed to send message . Please
 
 </div>
 <div className='container mx-auto px-6 relative z-10'>
-<div className='text-center max-w-3xl mx-auto mb-16'>
+<div className='text-center  max-w-3xl mx-auto mb-16'>
   <span className='text-lg text-red-800 font-medium tracking-wider' >Get In Touch</span>
-  <p className='text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade text-red-800 '>Let's Build
+  <p ref={ref} className={`text-4xl md:text-5xl font-bold mt-4 mb-6 ${inView?'animate-fade':""}  text-red-800 `}>Let's Build
      <span className='italic text-white'> something great</span> 
      </p>
-  <p className='text-gray-400 animate-fade animation-delay-100'>Send me a message if you are interested in building stuff with me  </p>
+  <p  ref={ref} className={`text-gray-400 ${inView?'animate-fade':""} animation-delay-100`}>Send me a message if you are interested in building stuff with me  </p>
 </div>
 <div className='grid lg:grid-cols-2 max-w-5xl gap-12  mx-auto'>
-  <div className='p-8 bg-gray-900  rounded-3xl border ring-1 ring-green-700 border-green-800 animate-fade animation-delay-200'>
+  <div  ref={ref} className={`p-8 bg-gray-900 rounded-3xl border ring-1 ring-green-700 border-green-800 ${inView?'animate-fade':""} animation-delay-200`}>
 
     <form className='space-y-6' onSubmit={(e)=>handleSubmit(e)}>
       <div > 
@@ -128,7 +134,7 @@ setSubmitStatus({type:"error",message:err.text||"Failed to send message . Please
       placeholder='Your Message...' rows={5} required 
       className='resize-none px-4 py-3 rounded-xl bg-gray-800  w-full border-2 border-green-800 focus:border-red-800 outline-none transition-all'/> 
       </div>
-      <Button size="lg" type="submit" disabled={isLoading} className='disbaled:gray-500 w-full'>
+      <Button size="lg" type="submit" disabled={isLoading} className='disabled:bg-gray-500 disabled:pointer-events-none  w-full'>
        
        {
         !isLoading?<>
@@ -160,7 +166,7 @@ setSubmitStatus({type:"error",message:err.text||"Failed to send message . Please
     </form>
   </div>
   
- <div className='space-y-6 animate-fade mx-auto animation-delay-400'>
+ <div className={`space-y-6 ${inView?'animate-fade':""} mx-auto animation-delay-400`}>
 <div className='rounded-3xl  border border-green-800 ring-2 ring-green-800 p-8 bg-gray-800' >
   <p className='text-xl font-semibold mb-6'> Contact Information</p>
 <div className='space-y-4'>

@@ -12,8 +12,8 @@ body{
 
 *{
     
-    scrollbar-width: thin;
-    scrollbar-color: #07ed99 rgb(248, 247, 247);
+    scrollbar-width:none;
+    scrollbar-color: #9f0404 rgb(11, 11, 11);
 }
 
 @keyframes fade-in{
@@ -54,7 +54,7 @@ transform:translateY(-10px);
   animation: float 4s ease-in-out infinite;
 } 
 .animate-fade{
-  animation: fade-in 1.5s ease-out both;
+  animation: fade-in 1.5s ease-out forwards;
 }
 .animate-slide{
   animation: slide 30s linear infinite;
