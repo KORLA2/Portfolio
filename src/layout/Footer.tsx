@@ -3,11 +3,9 @@ import React from 'react'
 
 const socials=[
   {name:Github,href:"https://github.com/KORLA2"},
-  {name:Linkedin,href:"https://github.com/KORLA2"},
-  {name:Youtube,href:"https://github.com/KORLA2"},
-  {name:Twitter,href:"https://github.com/KORLA2"},
-
-
+  {name:Linkedin,href:"https://www.linkedin.com/in/korla-goutham-4007701a4/"},
+  {name:Youtube,href:"https://www.youtube.com/@CloudNewbie1023"},
+  {name:Twitter,href:"https://x.com/goutham1023"},
 ]
 
 const footerLinks=[
