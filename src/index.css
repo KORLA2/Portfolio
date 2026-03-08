@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Old+Italic&family=Outfit:wght@100..900&family=Pacifico&family=Yuji+Boku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 html {
   scroll-behavior:smooth
 
@@ -7,10 +7,11 @@ html {
 body{
   background-color: rgb(28, 28, 28);
  /* font-family: cursive; */
- font-family: "Pacifico", cursive;
- color:white;
+  font-family:  "Cinzel", serif;
+  color:white;
 
 }
+
 
 *{
     
@@ -101,16 +102,30 @@ transform:translateY(-10px);
   animation-delay: 600ms;
 }
 
+@property --rotate{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
 
 @keyframes border {
- 0% ,100% { border-left: 3px solid rgb(8, 237, 203);}
-  25% { border-bottom: 3px solid rgb(8, 237, 203) }
-  50% { border-right: 3px solid rgb(8, 237, 203) }
-  75%{
- border-top: 3px solid rgb(8, 237, 203) }
-
+  from{
+        --rotate:0deg;
+    }to{
+        --rotate:360deg;
+    }
   
 }
-.animate-border:hover{
-animation:border  3s linear infinite
+.animate-border{
+  border:2px solid transparent;
+      background:  linear-gradient(rgb(3, 87, 19)) padding-box,
+    conic-gradient(
+      from var(--rotate),
+      #00f5ff,
+      #7c3aed,
+      #ff00aa,
+      #00f5ff
+    ) border-box;
+
+      animation:border  3s linear infinite
 }

@@ -80,13 +80,13 @@ React.js . Node.js
   </span>
   
      </h1>
-     <p className="text-lg max-w-lg animate-fade animation-delay-200">
+     <p className="text-lg text-gray-300 max-w-lg animate-fade animation-delay-200">
      Iam a  Software Engineer experienced in React, Node.js, TypeScript, and Next.js, creating performant and secure full-stack applications.
      </p>
 </div>
 
 <div className="flex flex-wrap gap-4 animate-fade animation-delay-300 justify-around">
-<Button className="inline-flex items-center gap-2" size="lg"><a href="#contact"> Contact Me </a> <ArrowRight className="w-5 h-5"/> </Button>
+<Button className="inline-block items-center gap-2" size="lg"><a href="#contact"> Contact Me </a> <ArrowRight className="w-5 h-5"/> </Button>
 
 <a
   href="/Korla-Goutham.pdf"
@@ -115,7 +115,7 @@ download>
       <div className="absolute inset-0 rounded-4xl bg-linear-to-br from-orange-500 via-transparent to-orange-200/80 animate-pulse blur-2xl  "/>
       <div className="relative max-w-sm mx-auto">
          <div className="p-2 relative rounded-3xl shadow-[0_0_20px_rgba(34,197,94,0.6)]">
-          <img src="/Rocky-2.png" alt="Korla Goutham" className="w-full object-cover aspect-square rounded-2xl"/> 
+          <img src="/goutham.jpeg" alt="Korla Goutham" className="w-full object-cover aspect-square rounded-2xl"/> 
          {/* Floating Badges */}
             <div className="absolute -bottom-4 -right-4 rounded-xl px-4 py-3 animate">
               <div className="flex gap-3 items-center">
@@ -128,7 +128,7 @@ download>
          {/* Stats Badge */}
           <div className=" absolute -top-4 -left-4 animate rounded-xl px-4 py-3 animation-delay-400">
             <div className="text-2xl font-bold text-green-400"> 3+</div>
-            <div className="text-sm text-gray-400"> Years Of Experience</div>
+            <div className="text-sm text-gray-200"> Years Of Experience</div>
           </div>
          </div>
       </div>
